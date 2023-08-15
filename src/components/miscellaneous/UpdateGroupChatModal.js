@@ -200,7 +200,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain,fetchMessages }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { selectedChat, setSelectedChat, user } = ChatState();
     const [groupChatName, setGroupChatName] = useState();
-  const [search, setSearch] = useState("");
+  const [setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [loading, setLoading] = useState(false);
   const [renameloading, setRenameLoading] = useState(false);
