@@ -20,6 +20,7 @@ import UserBadgeItem from "../userAvatar/UserBadgeItem";
 import UserListItem from "../userAvatar/UserListItem";
 
 const GroupChatModal = ({ children }) => {
+    const url="https://wdsfgsd.adaptable.app"
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [groupChatName, setGroupChatName] = useState();
   const [selectedUsers, setSelectedUsers] = useState([]);
@@ -59,7 +60,7 @@ const GroupChatModal = ({ children }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/user?search=${query}`, config);
+      const { data } = await axios.get(url+`/api/user?search=${query}`, config);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {
