@@ -17,7 +17,7 @@ import {
 import { ChatState } from '../../Context/ChatProvider';
 
 const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain,fetchMessages }) => {
-
+  const url="https://wdsfgsd.adaptable.app"
   const handleRemove = async (user1) => {
     if (selectedChat.groupAdmin._id !== user._id && user1._id !== user._id) {
       toast({
@@ -38,7 +38,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain,fetchMessages }) => {
         },
       };
       const { data } = await axios.put(
-        `/api/chat/groupremove`,
+        url+`/api/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -78,7 +78,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain,fetchMessages }) => {
         },
       };
       const { data } = await axios.put(
-        "/api/chat/rename",
+        url+"/api/chat/rename",
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -141,7 +141,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain,fetchMessages }) => {
         },
       };
       const { data } = await axios.put(
-        `/api/chat/groupadd`,
+        url+`/api/chat/groupadd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -181,7 +181,7 @@ const UpdateGroupChatModal = ({ fetchAgain, setFetchAgain,fetchMessages }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/user?search=${query}`, config);
+      const { data } = await axios.get(url+`/api/user?search=${query}`, config);
       console.log(data);
       setLoading(false);
       setSearchResult(data);
