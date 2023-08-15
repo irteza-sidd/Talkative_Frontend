@@ -19,6 +19,7 @@ import { getSender } from '../../config/ChatLogics';
 
 
 const SideDrawer = () => {
+  const url="https://wdsfgsd.adaptable.app"
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -86,7 +87,7 @@ const toast=useToast();
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post(`/api/chat`, { userId }, config);
+      const { data } = await axios.post(url+`/api/chat`, { userId }, config);
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);
       setLoadingChat(false);
