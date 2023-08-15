@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  padding: 0;
+}
+
+.App::before,
+.App::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: url("./2992779.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1; /* Position the background images behind the content */
+}
+
+.App::before {
+  left: 0;
+}
+
+.App::after {
+  right: 0;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(163, 75, 75, 0.281);
+}
+
+@media (max-width: 822px) {
+  .App {
+    background-color:whitesmoke;
+    background-image: none;
+  }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
