@@ -49,7 +49,7 @@ const toast=useToast();
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/user?search=${query}`, config);
+      const { data } = await axios.get(url+`/api/user?search=${query}`, config);
       if (data.length === 0) {
         setSearchResult([]);
         setLoading(false);
