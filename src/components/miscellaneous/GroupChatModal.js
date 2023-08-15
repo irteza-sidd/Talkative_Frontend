@@ -25,7 +25,7 @@ const GroupChatModal = ({ children }) => {
   const [groupChatName, setGroupChatName] = useState();
   const [selectedUsers, setSelectedUsers] = useState([]);
   const url="https://wdsfgsd.adaptable.app"
-const [setSearch] = useState("");
+const [search, setSearch] = useState(""); 
   const [searchResult, setSearchResult] = useState([]);
   const [loading, setLoading] = useState(false);
   const toast = useToast();
