@@ -13,7 +13,7 @@ import io from 'socket.io-client'
 import './typingIndicator.css';
 
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = ""https://wdsfgsd.adaptable.app"";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
