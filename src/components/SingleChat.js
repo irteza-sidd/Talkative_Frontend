@@ -7,6 +7,7 @@ import { getSender, getSenderFull } from '../config/ChatLogics'
 import ProfileModal from './miscellaneous/ProfileModal'
 import UpdateGroupChatModal from './miscellaneous/UpdateGroupChatModal';
 import axios from 'axios';
+
 import './styles.css'
 import { ScrollableChat } from './ScrollableChat';
 import io from 'socket.io-client'
